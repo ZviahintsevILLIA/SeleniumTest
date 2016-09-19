@@ -188,4 +188,8 @@ public class HomePage {
     public void selectCountry(String s) {
         country.selectByVisibleText(s);
     }
+
+    public void setPersonalUserType() {
+        userTypePersonal.click();
+    }
 }

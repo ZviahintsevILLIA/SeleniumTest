@@ -35,7 +35,7 @@ public class RegisterTestPage {
 //        driver.close();
     }
 
-    @Test (description = "Bug 1. Validation of field First Name", priority = 1,enabled = false)
+    @Test (description = "Bug 1. Validation of field First Name", priority = 1,enabled = true)
     public void validFirstName() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -58,7 +58,7 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 2. Validation of field Last Name", priority = 2,enabled = false)
+    @Test (description = "Bug 2. Validation of field Last Name", priority = 2,enabled = true)
     public void validLastName() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -81,7 +81,7 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 3. Validation of field Address", priority = 3,enabled = false)
+    @Test (description = "Bug 3. Validation of field Address", priority = 3,enabled = true)
     public void validAddress() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -104,7 +104,7 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 4. Validation of field City", priority = 4,enabled = false) //No validation as postcode
+    @Test (description = "Bug 4. Validation of field City", priority = 4,enabled = true) //No validation as postcode
     public void validCity() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -127,7 +127,7 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 5. Validation of Postcode", priority = 5,enabled = false)
+    @Test (description = "Bug 5. Validation of Postcode", priority = 5,enabled = true)
     public void validPostcode() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -150,7 +150,7 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 6. Select border line “---------” as a country", priority = 6,enabled = false)
+    @Test (description = "Bug 6. Select border line “---------” as a country", priority = 6,enabled = true)
     public void validCountry() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -173,7 +173,7 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 7. Validation of State", priority = 7,enabled = false)
+    @Test (description = "Bug 7. Validation of State", priority = 7,enabled = true)
     public void validState() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -196,7 +196,7 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 8. Validation of Phone Number", priority = 8,enabled = false)
+    @Test (description = "Bug 8. Validation of Phone Number", priority = 8,enabled = true)
     public void validPhone() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -219,7 +219,7 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 9. Validation of Email", priority = 9,enabled = false)
+    @Test (description = "Bug 9. Validation of Email", priority = 9,enabled = true)
     public void validEmail() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -242,7 +242,7 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 10. Fields “Business Name” and “Business Number” a hidden", priority = 10,enabled = false)
+    @Test (description = "Bug 10. Fields “Business Name” and “Business Number” a hidden", priority = 10,enabled = true)
     public void hiddenFields() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -253,7 +253,7 @@ public class RegisterTestPage {
         Assert.assertTrue(testPassed);
 
     }
-    @Test (description = "Bug 11. Validation of Business Name", priority = 11,enabled = false)
+    @Test (description = "Bug 11. Validation of Business Name", priority = 11,enabled = true)
     public void validBusinessName() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -276,7 +276,7 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 12. Validation of Business Phone", priority = 12,enabled = false)
+    @Test (description = "Bug 12. Validation of Business Phone", priority = 12,enabled = true)
     public void validBusinessPhone() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -299,13 +299,13 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 13. Wrong element in line near Business Number", priority = 13,enabled = false)
+    @Test (description = "Bug 13. Wrong element in line near Business Number", priority = 13,enabled = true)
     public void wrongElement() {
         HomePage home = new HomePage(driver);
         home.getUserTypeBusiness().click();
         Assert.assertFalse(driver.findElement(By.xpath(".//*[@id='business_type_div']")).isDisplayed());
     }
-    @Test (description = "Bug 14. Validation of Username", priority = 14,enabled = false)
+    @Test (description = "Bug 14. Validation of Username", priority = 14,enabled = true)
     public void validUsername() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -329,7 +329,7 @@ public class RegisterTestPage {
             Assert.assertTrue(testPassed);
         }
     }
-    @Test (description = "Bug 15. Validation of Username", priority = 15,enabled = false)
+    @Test (description = "Bug 15. Validation of Username", priority = 15,enabled = true)
     public void validPassword() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -353,7 +353,7 @@ public class RegisterTestPage {
         }
     }
     @Test (description = "Bug 16. Clearing of the field “First Name”, when click any element after input Username",
-            priority = 16,enabled = false)
+            priority = 16,enabled = true)
     public void passwordBug() {
         HomePage home = new HomePage(driver);
         String testName = "ILLIA";
@@ -364,21 +364,21 @@ public class RegisterTestPage {
     }
     @Test (description = "Bug 17. While selecting State in Australia country, " +
             "Phone Number prefix must be autofill in international format",
-            priority = 17,enabled = false)
+            priority = 17,enabled = true)
     public void autofillPhonePrefixAustraliaState() {
         HomePage home = new HomePage(driver);
         home.selectStateOfDifficaltCountry("Australia","Australian Capital Territory");
         Assert.assertTrue(home.getPhoneNumber().getAttribute("value").equals("+612"));
     }
     @Test (description = "Bug 18. Wrong autofill of State field while select New Zealand Country",
-            priority = 18,enabled = false)
+            priority = 18,enabled = true)
     public void wrongStateAutofillNewZealand() {
         HomePage home = new HomePage(driver);
         home.getCountry().selectByVisibleText("New Zealand");
         Assert.assertTrue(home.getState().getAttribute("value").equals(""));
     }
     @Test (description = "Bug 19. In Japan Country list of states is not sorted alphabetically",
-            priority = 19,enabled = false)
+            priority = 19,enabled = true)
     public void sortingOfJapanStates() {
         HomePage home = new HomePage(driver);
         home.selectCountry("Japan"); //You can try this test for "United States"
@@ -395,7 +395,7 @@ public class RegisterTestPage {
     }
     @Test (description = "Bug 20. When user select wrong country in full countries list, which also present in " +
             "favorite list and try to select country again, selected one will in favorites list, so need to scroll down",
-            priority = 20,enabled = false)
+            priority = 20,enabled = true)
     public void retrySelectCountryBug() {
         HomePage home = new HomePage(driver);
         int a = 21; //21 - index of Australia in full countries list
@@ -403,7 +403,7 @@ public class RegisterTestPage {
         int indexOfSelectedCountry = Integer.parseInt(home.getCountry().getFirstSelectedOption().getAttribute("index"));
         Assert.assertTrue(a == indexOfSelectedCountry);
     }
-    @Test (description = "Bug 21. The Bahamas as The Gambia must contain article “The”", priority = 21,enabled = false)
+    @Test (description = "Bug 21. The Bahamas as The Gambia must contain article “The”", priority = 21,enabled = true)
     public void BahamasBug() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -421,7 +421,7 @@ public class RegisterTestPage {
         Assert.assertTrue(testPassed);
     }
     @Test (description = "Bug 22. While selecting Hong Kong S.A.R. Country, Postcode autofill with “00000”",
-            priority = 22,enabled = false)
+            priority = 22,enabled = true)
     public void autofillHongKongPostcode() {
         HomePage home = new HomePage(driver);
         String testPostcode = "01001";
@@ -430,7 +430,7 @@ public class RegisterTestPage {
         Assert.assertTrue(testPostcode.equals(home.getPostcode().getAttribute("value")));
     }
     @Test (description = "Bug 23. While selecting Jamaica Country, field State is not available",
-            priority = 23,enabled = false)
+            priority = 23,enabled = true)
     public void notAvailableStateOnJamaica() {
         HomePage home = new HomePage(driver);
         home.selectCountry("Jamaica");
@@ -450,5 +450,32 @@ public class RegisterTestPage {
         home.fillPostcode(testPostcode);
         home.selectCountry("United Arab Emirates");
         Assert.assertTrue(testPostcode.equals(home.getPostcode().getAttribute("value")));
+    }
+    @Test (description = "Successful creating normal account",
+            priority = 25,enabled = true)
+    public void createNormalAccount() {
+        HomePage home = new HomePage(driver);
+        home.fillAllFieldsCorrectlyPersonal();
+        home.submit();
+        Assert.assertTrue(driver.getCurrentUrl().equals("http://www.cheapdomains.com.au/index.html"));
+    }
+    @Test (description = "Successful creating crazy account",
+            priority = 26,enabled = true)
+    public void createCrazyAccount() {
+        HomePage home = new HomePage(driver);
+        home.fillLastName("!@#$%^&*()");
+        home.fillAddress(longText);
+        home.fillCity(longText);
+        home.fillPostcode("!@#$%^&*()");
+        home.selectCountry("-----------------");
+        home.fillState(longText);
+        home.fillPhone("1!@#$%^&*()");
+        home.fillEmail("@.gi");
+        home.setPersonalUserType();
+        home.fillUsername("!");
+        home.fillPassword("12345");
+        home.fillFirstName("!@#$%^&*()");
+        home.submit();
+        Assert.assertTrue(driver.getCurrentUrl().equals("http://www.cheapdomains.com.au/index.html"));
     }
 }
