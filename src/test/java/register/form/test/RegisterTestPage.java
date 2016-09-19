@@ -421,12 +421,25 @@ public class RegisterTestPage {
         Assert.assertTrue(testPassed);
     }
     @Test (description = "Bug 22. While selecting Hong Kong S.A.R. Country, Postcode autofill with “00000”",
-            priority = 22,enabled = true)
+            priority = 22,enabled = false)
     public void autofillHongKongPostcode() {
         HomePage home = new HomePage(driver);
         String testPostcode = "01001";
         home.fillPostcode(testPostcode);
         home.selectCountry("Hong Kong S.A.R.");
         Assert.assertTrue(testPostcode.equals(home.getPostcode().getAttribute("value")));
+    }
+    @Test (description = "Bug 23. While selecting Jamaica Country, field State is not available",
+            priority = 23,enabled = true)
+    public void notAvailableStateOnJamaica() {
+        HomePage home = new HomePage(driver);
+        home.selectCountry("Jamaica");
+        try {
+            home.getState();
+        }
+        catch (Exception e) {
+            Assert.assertTrue(false);
+        }
+
     }
 }
