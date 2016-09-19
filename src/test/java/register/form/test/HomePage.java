@@ -87,6 +87,11 @@ public class HomePage {
         return state;
     }
 
+    public WebElement getPostcode() {
+        postcode = driver.findElement(By.name("post_code"));
+        return postcode;
+    }
+
     public void fillAllFieldsCorrectlyPersonal() {
 
         putText(lastName,"ZVIAHINTSEV");

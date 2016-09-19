@@ -403,7 +403,7 @@ public class RegisterTestPage {
         int indexOfSelectedCountry = Integer.parseInt(home.getCountry().getFirstSelectedOption().getAttribute("index"));
         Assert.assertTrue(a == indexOfSelectedCountry);
     }
-    @Test (description = "Bug 21. The Bahamas as The Gambia must contain article “The”", priority = 21,enabled = true)
+    @Test (description = "Bug 21. The Bahamas as The Gambia must contain article “The”", priority = 21,enabled = false)
     public void BahamasBug() {
         boolean testPassed = false;
         HomePage home = new HomePage(driver);
@@ -419,5 +419,14 @@ public class RegisterTestPage {
             }
         }
         Assert.assertTrue(testPassed);
+    }
+    @Test (description = "Bug 22. While selecting Hong Kong S.A.R. Country, Postcode autofill with “00000”",
+            priority = 22,enabled = true)
+    public void autofillHongKongPostcode() {
+        HomePage home = new HomePage(driver);
+        String testPostcode = "01001";
+        home.fillPostcode(testPostcode);
+        home.selectCountry("Hong Kong S.A.R.");
+        Assert.assertTrue(testPostcode.equals(home.getPostcode().getAttribute("value")));
     }
 }
